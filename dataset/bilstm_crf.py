@@ -7,14 +7,14 @@ from keras_contrib.layers import CRF
 from keras_contrib.utils import save_load_utils
 from keras.layers import Embedding, LSTM, Bidirectional, TimeDistributed, Dense, Dropout, SimpleRNN, Flatten, GRU
 from keras import Sequential, losses, layers, metrics, Model
-from dataset.ner_annotated_corpus.data_process import processed_data     #
+from data_process_ner import processed_data
 from numpy import *
 import numpy as np
 from keras.utils import to_categorical
 import numpy as np
-from dataset.MR.rt_polaritydata.data_process import process_data_mr      #
+from data_process_mr import process_data_mr
 from plt_loss import plot_loss_and_accuracy   # 可以调用
-from dataset.imdb.data_process_imdb import proprecess_imdb               #
+from data_process_imdb import proprecess_imdb
 
 
 # %%
@@ -159,8 +159,8 @@ def main():
     train_x_mr, train_y_mr, test_x_mr, test_y_mr, vocab_size_glove, embedding_dim_glove, embedding_matrix, max_len_glove = process_mr.split_data()
 
     #### imdb数据集
-    # process_mr = proprecess_imdb(max_len, embedding_dim)
-    # train_x_mr, train_y_mr, test_x_mr, test_y_mr, vocab_size_glove, embedding_dim_glove, embedding_matrix, max_len_glove = process_mr.process()
+    process_mr = proprecess_imdb(max_len, embedding_dim)
+    train_x_mr, train_y_mr, test_x_mr, test_y_mr, vocab_size_glove, embedding_dim_glove, embedding_matrix, max_len_glove = process_mr.process()
 
     dataset = processed_data()
     max_len = dataset.max_len

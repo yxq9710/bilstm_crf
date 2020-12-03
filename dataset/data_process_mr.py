@@ -17,7 +17,7 @@ class process_data_mr:
         self.load_data()
 
     def load_data(self):
-        with open('E:/sentiment_classification/dataset/MR/rt_polaritydata/rt-polarity.neg', 'r', encoding='utf-8', errors='ignore') as file:
+        with open('MR/rt_polaritydata/rt-polarity.neg', 'r', encoding='utf-8', errors='ignore') as file:
             lines = file.readlines()
             data_set = []
             for line in lines:
@@ -26,7 +26,7 @@ class process_data_mr:
         with open('neg_label.txt', 'w', encoding='utf-8') as file:
             file.writelines(data_set)
 
-        with open('E:/sentiment_classification/dataset/MR/rt_polaritydata/rt-polarity.pos', 'r', encoding='utf-8', errors='ignore') as file:
+        with open('MR/rt_polaritydata/rt-polarity.pos', 'r', encoding='utf-8', errors='ignore') as file:
             lines = file.readlines()
             data_set = []
             for line in lines:
@@ -75,7 +75,7 @@ class process_data_mr:
         word_to_vector = {}
         word_to_index = {}
         index_to_vector = {}
-        with open('E:\sentiment_classification\dataset\pre_trained\glove.6B\glove.6B.100d.txt', 'r',
+        with open('glove.6B.100d.txt', 'r',
                   encoding='utf-8') as file:
             lines = file.readlines()
             i = 1

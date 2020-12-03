@@ -31,7 +31,7 @@ def glove_vocab_imdb():
     word_to_vector = {}
     word_to_index = {}
     index_to_vector = {}
-    with open('E:\sentiment_classification\dataset\pre_trained\glove.6B\glove.6B.100d.txt', 'r',
+    with open('glove.6B.100d.txt', 'r',
               encoding='utf-8') as file:
         lines = file.readlines()
         i = 1
