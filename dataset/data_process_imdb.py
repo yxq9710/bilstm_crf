@@ -93,4 +93,3 @@ class proprecess_imdb:
 if __name__ == '__main__':   # 调用时不会运行这个函数
     imdb = proprecess_imdb(64, 100)
     x_train, y_train, x_test, y_test, vocab_size, embedding_dim, embedding_matrix, max_len = imdb.process()
-    print("c")
