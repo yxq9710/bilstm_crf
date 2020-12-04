@@ -11,7 +11,7 @@ import numpy as np
 
 # %%
 class Data_Loader:
-    def __init__(self, raw_data_path='E:/sentiment_classification/dataset/ner_annotated_corpus/ner_dataset.csv'):
+    def __init__(self, raw_data_path='dataset/ner_annotated_corpus/ner_dataset.csv'):
         self.data = []
         self.path = raw_data_path
         self.sentences = []
@@ -142,7 +142,7 @@ def processed_data():
 
     word_to_index = {}
     index_to_vector = {}
-    with open('E:\sentiment_classification\dataset\pre_trained\glove.6B\glove.6B.100d.txt', 'r',
+    with open('glove.6B.50d.txt', 'r',
               encoding='utf-8') as file:
         lines = file.readlines()
         i = 1
